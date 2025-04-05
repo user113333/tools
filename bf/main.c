@@ -85,12 +85,15 @@ void parse_minus()
     p.source_pointer++;
 }
 
+// left bracket
 void parse_lb()
 {
+    // TODO: it does not skip to the ] if current cell is 0
     p.jumplist[p.jumplist_pointer++] = p.source_pointer;
     p.source_pointer++;
 }
 
+// right bracket
 void parse_rb()
 {
     if (p.data[p.data_pointer] == 0) {
